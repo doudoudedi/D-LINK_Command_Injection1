@@ -1,4 +1,4 @@
-# D-LINK_Router_Command_Injection
+# D-LINK_DIR820L(series)_Command_Injection
 
 #### Official certification
 https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10264
